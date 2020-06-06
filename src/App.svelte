@@ -61,7 +61,6 @@
     max-height: 160px;
   }
 
-  #name,
   #searchInput {
     text-align: center;
   }
