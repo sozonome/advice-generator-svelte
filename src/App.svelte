@@ -129,9 +129,9 @@
     <section id="mainSearch">
       <input
         id="searchInput"
-        on:input={(e) => (searchInput = e.target.value)}
+        bind:value={searchInput}
         type="text"
-        value={searchInput} />
+      />
       <p style="font-size:0.8rem">
         Use the search box above to get advice by specific word
       </p>
