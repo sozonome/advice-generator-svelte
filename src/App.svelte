@@ -151,7 +151,7 @@
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href={`https://twitter.com/intent/tweet?text=${randomAdvice}`}>
+              href={`https://twitter.com/intent/tweet?text=${entry.advice}`}>
               <button class="twitter-share-button">Tweet</button>
             </a>
             <p class="adviceDate">{entry.date}</p>
