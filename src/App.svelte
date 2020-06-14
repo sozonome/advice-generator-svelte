@@ -15,8 +15,8 @@
     if (searchInput !== null && searchInput !== "") {
       search = true;
       fetch(`https://api.adviceslip.com/advice/search/${searchInput}`)
-        .then((result) => result.json())
-        .then((data) => {
+        .then(result => result.json())
+        .then(data => {
           if (data.slips) {
             randomAdvice = data.slips;
             show = true;
@@ -30,8 +30,8 @@
     } else {
       search = false;
       fetch(`https://api.adviceslip.com/advice`)
-        .then((result) => result.json())
-        .then((data) => {
+        .then(result => result.json())
+        .then(data => {
           randomAdvice = data.slip.advice;
           show = true;
         });
@@ -127,13 +127,10 @@
       <p>What are you up to today?</p>
     </section>
     <section id="mainSearch">
-      <input
-        id="searchInput"
-        bind:value={searchInput}
-        type="text"
-      />
+      <input id="searchInput" bind:value={searchInput} type="text" />
       <p style="font-size:0.8rem">
-        Use the search box above to get advice by specific word
+        Use the search box above to get advice by specific word <br>
+        or just leave it empty to get random advice
       </p>
       <button class="requestButton" on:click={() => fetchRandomAdvice()}>
         Give me an Advice
